@@ -1,4 +1,5 @@
-from asyncio import run, gather
+import logging
+from asyncio import gather, run
 from io import BytesIO
 from json import dumps
 
@@ -6,6 +7,9 @@ from ijson import items, kvitems
 from requests import get
 
 stream_file: BytesIO = BytesIO()
+
+logger = logging.getLogger(name=__name__)
+logging.basicConfig(level=10)
 
 
 async def stream_data():
