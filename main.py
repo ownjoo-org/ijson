@@ -9,7 +9,7 @@ from requests import get
 stream_file: BytesIO = BytesIO()
 
 logger = logging.getLogger(name=__name__)
-logging.basicConfig(level=10)
+logging.basicConfig(level=logging.DEBUG)
 
 
 async def stream_data():
